@@ -53,7 +53,7 @@ public class Principal {
             return conversor.obterDados(veiculoJson, Veiculo.class);
         }).toList();
 
-        veiculos.forEach(System.out::println);
+        veiculos.stream().sorted(Comparator.comparing(Veiculo::valor)).forEach(System.out::println);
 
         //System.out.println(veiculos);
 
